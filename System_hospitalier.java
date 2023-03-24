@@ -34,12 +34,17 @@ public class System_hospitalier {
 	}
 	
 	private String analyserRequete(Requête requête) {
-		// Analyser la requête
-		return "requête analysée";
-	}
-	
+		String str = requête.getPatient().getName()+" "+requête.getPatient().getAge()+"Ans < ";
+		for(object s:requête.getSymptomes())
+		{	
+			str = str+s+" ";
+		}
+		str = str+">";
+		return str;
+	}	
 	private String comparerDonnes() {
 		// Comparaison des données
+		// On compare patient1 et patient2 leurs localisations pour vérifier s'il y a des clusters ou nons pour vérifier s'il y a des clusters ou nons pour vérifier s'il y a des clusters ou non... 
 		return "Cluster trouvé";
 	}
 
